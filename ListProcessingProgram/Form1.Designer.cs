@@ -63,6 +63,7 @@
             this.txtboxAdd.Name = "txtboxAdd";
             this.txtboxAdd.Size = new System.Drawing.Size(100, 20);
             this.txtboxAdd.TabIndex = 2;
+            this.txtboxAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtboxAdd_KeyPress);
             // 
             // lblAddToList
             // 

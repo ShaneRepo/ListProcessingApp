@@ -23,6 +23,7 @@ namespace ListProcessingProgram
         {
             MessageBox.Show("The app allows you to add numbers to a list, sort them,\n remove them and save/read to/from file.");
         }
+
         public Form1()
         {
             InitializeComponent();
@@ -36,6 +37,15 @@ namespace ListProcessingProgram
         private void btnHelp_Click(object sender, EventArgs e)
         {
             help();
+        }
+        // allow only numbers in textbox
+        private void txtboxAdd_KeyPress(object sender, KeyPressEventArgs e)
+        {          
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
     
