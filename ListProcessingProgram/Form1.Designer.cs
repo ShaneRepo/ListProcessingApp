@@ -30,6 +30,11 @@
         {
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.txtboxAdd = new System.Windows.Forms.TextBox();
+            this.lblAddToList = new System.Windows.Forms.Label();
+            this.lblList = new System.Windows.Forms.Label();
+            this.lstboxList = new System.Windows.Forms.ListBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnHelp
@@ -52,16 +57,66 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // txtboxAdd
+            // 
+            this.txtboxAdd.Location = new System.Drawing.Point(95, 41);
+            this.txtboxAdd.Name = "txtboxAdd";
+            this.txtboxAdd.Size = new System.Drawing.Size(100, 20);
+            this.txtboxAdd.TabIndex = 2;
+            // 
+            // lblAddToList
+            // 
+            this.lblAddToList.AutoSize = true;
+            this.lblAddToList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddToList.Location = new System.Drawing.Point(13, 44);
+            this.lblAddToList.Name = "lblAddToList";
+            this.lblAddToList.Size = new System.Drawing.Size(76, 13);
+            this.lblAddToList.TabIndex = 3;
+            this.lblAddToList.Text = "Add To List:";
+            // 
+            // lblList
+            // 
+            this.lblList.AutoSize = true;
+            this.lblList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblList.Location = new System.Drawing.Point(326, 47);
+            this.lblList.Name = "lblList";
+            this.lblList.Size = new System.Drawing.Size(57, 13);
+            this.lblList.TabIndex = 4;
+            this.lblList.Text = "The List:";
+            // 
+            // lstboxList
+            // 
+            this.lstboxList.FormattingEnabled = true;
+            this.lstboxList.Location = new System.Drawing.Point(398, 44);
+            this.lstboxList.Name = "lstboxList";
+            this.lstboxList.Size = new System.Drawing.Size(120, 95);
+            this.lstboxList.TabIndex = 5;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(12, 71);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 6;
+            this.btnAdd.Text = "Add To List";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(865, 630);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.lstboxList);
+            this.Controls.Add(this.lblList);
+            this.Controls.Add(this.lblAddToList);
+            this.Controls.Add(this.txtboxAdd);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnHelp);
             this.Name = "Form1";
             this.Text = "List Processing App";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -69,6 +124,11 @@
 
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.TextBox txtboxAdd;
+        private System.Windows.Forms.Label lblAddToList;
+        private System.Windows.Forms.Label lblList;
+        private System.Windows.Forms.ListBox lstboxList;
+        private System.Windows.Forms.Button btnAdd;
     }
 }
 
