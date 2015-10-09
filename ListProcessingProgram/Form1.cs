@@ -16,6 +16,8 @@ namespace ListProcessingProgram
         // global stream objects
         StreamWriter outputFile;
         StreamReader inputFile;
+        // global list object to hold integers
+        List<int> nums = new List<int>();
         public Form1()
         {
             InitializeComponent();
