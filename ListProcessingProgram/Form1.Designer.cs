@@ -39,6 +39,8 @@
             this.lblRemove = new System.Windows.Forms.Label();
             this.txtboxRemove = new System.Windows.Forms.TextBox();
             this.btnRemove = new System.Windows.Forms.Button();
+            this.lblDisplay = new System.Windows.Forms.Label();
+            this.btnDisplay = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnHelp
@@ -145,11 +147,33 @@
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
+            // lblDisplay
+            // 
+            this.lblDisplay.AutoSize = true;
+            this.lblDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisplay.Location = new System.Drawing.Point(16, 220);
+            this.lblDisplay.Name = "lblDisplay";
+            this.lblDisplay.Size = new System.Drawing.Size(76, 13);
+            this.lblDisplay.TabIndex = 11;
+            this.lblDisplay.Text = "Display List:";
+            // 
+            // btnDisplay
+            // 
+            this.btnDisplay.Location = new System.Drawing.Point(98, 215);
+            this.btnDisplay.Name = "btnDisplay";
+            this.btnDisplay.Size = new System.Drawing.Size(97, 23);
+            this.btnDisplay.TabIndex = 12;
+            this.btnDisplay.Text = "Display The List";
+            this.btnDisplay.UseVisualStyleBackColor = true;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(865, 630);
+            this.Controls.Add(this.btnDisplay);
+            this.Controls.Add(this.lblDisplay);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.txtboxRemove);
             this.Controls.Add(this.lblRemove);
@@ -182,6 +206,8 @@
         private System.Windows.Forms.Label lblRemove;
         private System.Windows.Forms.TextBox txtboxRemove;
         private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Label lblDisplay;
+        private System.Windows.Forms.Button btnDisplay;
     }
 }
 

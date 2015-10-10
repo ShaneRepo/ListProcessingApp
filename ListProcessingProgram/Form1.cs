@@ -18,30 +18,50 @@ namespace ListProcessingProgram
         StreamReader inputFile;
         // global list object to hold integers
         List<int> numList = new List<int>();
-
+  
         // method to define instructions
-        public void help()
+        public void Help()
         {
             MessageBox.Show("The app allows you to add numbers to a list, sort them,\n remove them and save/read to/from file.");
         }
-
+        // method to display the list
+        public void DisplayList(List<int> numList)
+        {
+            int[] array = numList.ToArray();
+            string output = string.Empty;
+            foreach (int item in array)
+            {
+                output += item + "\n";
+            }
+            MessageBox.Show(output);
+            //Array.Clear(array, 0, array.Length);
+            //output = string.Empty;
+        }
+        // method to convert listbox items to list
+        public void ToList()
+        {
+            numList.Clear();
+            //List<string> lb = new List<string>();
+             foreach (int nums in lstboxList.Items)
+             {
+                 numList.Add(nums);
+             }
+            // numList = lb.ConvertAll<int>(Convert.ToInt32);
+        }
         public Form1()
         {
             InitializeComponent();
         }
-
         // exit the application
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         // button call help method
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            help();
+            Help();
         }
-
         // allow only numbers entered in textbox
         private void txtboxAdd_KeyPress(object sender, KeyPressEventArgs e)
         {          
@@ -51,7 +71,6 @@ namespace ListProcessingProgram
                 e.Handled = true;
             }
         }
-
         // add a number to the listbox, clear textbox and add focus for another entry
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -68,13 +87,11 @@ namespace ListProcessingProgram
                 txtboxAdd.Focus();
             }
         }
-
         // give textbox focus on form load
         private void Form1_Load(object sender, EventArgs e)
         {
             txtboxAdd.Focus();
         }
-
         // clear listbox
         private void button1_Click(object sender, EventArgs e)
         {
@@ -96,7 +113,6 @@ namespace ListProcessingProgram
                 txtboxRemove.Focus();
             }
         }
-
         // allow only numbers entered in textbox
         private void txtboxRemove_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -105,6 +121,12 @@ namespace ListProcessingProgram
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnDisplay_Click(object sender, EventArgs e)
+        {
+            ToList();
+            DisplayList(numList);
         }
     }
     
