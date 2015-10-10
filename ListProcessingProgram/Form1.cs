@@ -17,7 +17,7 @@ namespace ListProcessingProgram
         StreamWriter outputFile;
         StreamReader inputFile;
         // global list object to hold integers
-        List<int> nums = new List<int>();
+        List<int> numList = new List<int>();
 
         // method to define instructions
         public void help()
@@ -55,16 +55,30 @@ namespace ListProcessingProgram
         // add a number to the listbox, clear textbox and add focus for another entry
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            int someNum = int.Parse(txtboxAdd.Text);
-            lstboxList.Items.Add(someNum).ToString();
-            txtboxAdd.Clear();
-            txtboxAdd.Focus();
+            if (!string.IsNullOrWhiteSpace(txtboxAdd.Text))
+            {
+                int someNum = int.Parse(txtboxAdd.Text);
+                lstboxList.Items.Add(someNum).ToString();
+                txtboxAdd.Clear();
+                txtboxAdd.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Enter a integer into the textbox.");
+                txtboxAdd.Focus();
+            }
         }
 
         // give textbox focus on form load
         private void Form1_Load(object sender, EventArgs e)
         {
             txtboxAdd.Focus();
+        }
+
+        // clear listbox
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lstboxList.Items.Clear();
         }
     }
     
