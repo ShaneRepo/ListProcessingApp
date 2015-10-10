@@ -42,7 +42,7 @@
             this.btnHelp.Location = new System.Drawing.Point(434, 562);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(75, 23);
-            this.btnHelp.TabIndex = 0;
+            this.btnHelp.TabIndex = 2;
             this.btnHelp.Text = "Help";
             this.btnHelp.UseVisualStyleBackColor = true;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
@@ -52,7 +52,7 @@
             this.btnExit.Location = new System.Drawing.Point(550, 562);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -62,7 +62,7 @@
             this.txtboxAdd.Location = new System.Drawing.Point(95, 41);
             this.txtboxAdd.Name = "txtboxAdd";
             this.txtboxAdd.Size = new System.Drawing.Size(100, 20);
-            this.txtboxAdd.TabIndex = 2;
+            this.txtboxAdd.TabIndex = 0;
             this.txtboxAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtboxAdd_KeyPress);
             // 
             // lblAddToList
@@ -72,7 +72,7 @@
             this.lblAddToList.Location = new System.Drawing.Point(13, 44);
             this.lblAddToList.Name = "lblAddToList";
             this.lblAddToList.Size = new System.Drawing.Size(76, 13);
-            this.lblAddToList.TabIndex = 3;
+            this.lblAddToList.TabIndex = 4;
             this.lblAddToList.Text = "Add To List:";
             // 
             // lblList
@@ -82,7 +82,7 @@
             this.lblList.Location = new System.Drawing.Point(326, 47);
             this.lblList.Name = "lblList";
             this.lblList.Size = new System.Drawing.Size(57, 13);
-            this.lblList.TabIndex = 4;
+            this.lblList.TabIndex = 5;
             this.lblList.Text = "The List:";
             // 
             // lstboxList
@@ -91,16 +91,17 @@
             this.lstboxList.Location = new System.Drawing.Point(398, 44);
             this.lstboxList.Name = "lstboxList";
             this.lstboxList.Size = new System.Drawing.Size(120, 95);
-            this.lstboxList.TabIndex = 5;
+            this.lstboxList.TabIndex = 6;
             // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(12, 71);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 6;
+            this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add To List";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // Form1
             // 
@@ -116,6 +117,7 @@
             this.Controls.Add(this.btnHelp);
             this.Name = "Form1";
             this.Text = "List Processing App";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

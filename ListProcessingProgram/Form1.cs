@@ -35,6 +35,7 @@ namespace ListProcessingProgram
         {
             this.Close();
         }
+
         // button call help method
         private void btnHelp_Click(object sender, EventArgs e)
         {
@@ -49,6 +50,21 @@ namespace ListProcessingProgram
             {
                 e.Handled = true;
             }
+        }
+
+        // add a number to the listbox, clear textbox and add focus for another entry
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            int someNum = int.Parse(txtboxAdd.Text);
+            lstboxList.Items.Add(someNum).ToString();
+            txtboxAdd.Clear();
+            txtboxAdd.Focus();
+        }
+
+        // give textbox focus on form load
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            txtboxAdd.Focus();
         }
     }
     
