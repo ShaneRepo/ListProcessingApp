@@ -64,7 +64,7 @@ namespace ListProcessingProgram
             }
             else
             {
-                MessageBox.Show("Enter a integer into the textbox.");
+                MessageBox.Show("Enter a integer into the textbox you want to add.");
                 txtboxAdd.Focus();
             }
         }
@@ -79,6 +79,32 @@ namespace ListProcessingProgram
         private void button1_Click(object sender, EventArgs e)
         {
             lstboxList.Items.Clear();
+        }
+        // remove a number from list, clear textbox and validation check
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtboxRemove.Text))
+            {
+                int someNum = int.Parse(txtboxRemove.Text);
+                lstboxList.Items.Remove(someNum);
+                txtboxRemove.Clear();
+                txtboxRemove.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Enter a integer into the textbox you want to remove.");
+                txtboxRemove.Focus();
+            }
+        }
+
+        // allow only numbers entered in textbox
+        private void txtboxRemove_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
     
