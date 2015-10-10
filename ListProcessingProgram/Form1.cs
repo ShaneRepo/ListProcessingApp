@@ -18,6 +18,7 @@ namespace ListProcessingProgram
         StreamReader inputFile;
         // global list object to hold integers
         List<int> nums = new List<int>();
+
         // method to define instructions
         public void help()
         {
@@ -29,16 +30,18 @@ namespace ListProcessingProgram
             InitializeComponent();
         }
 
+        // exit the application
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        // button call help method
         private void btnHelp_Click(object sender, EventArgs e)
         {
             help();
         }
-        // allow only numbers in textbox
+
+        // allow only numbers entered in textbox
         private void txtboxAdd_KeyPress(object sender, KeyPressEventArgs e)
         {          
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
