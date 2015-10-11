@@ -202,6 +202,15 @@ namespace ListProcessingProgram
             }
             MessageBox.Show("The mean of the list is: " + median);
         }
+        // get the mode
+        private void btnMode_Click(object sender, EventArgs e)
+        {
+            ToList();
+            var mode = numList.GroupBy(n => n).
+            OrderByDescending(g => g.Count()).
+            Select(g => g.Key).FirstOrDefault();
+            MessageBox.Show("The mode of the list is: " + mode);
+        }
     }
     
 }

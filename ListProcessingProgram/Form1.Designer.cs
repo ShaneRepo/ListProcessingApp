@@ -255,6 +255,7 @@
             this.btnMode.TabIndex = 20;
             this.btnMode.Text = "Display Mode";
             this.btnMode.UseVisualStyleBackColor = true;
+            this.btnMode.Click += new System.EventHandler(this.btnMode_Click);
             // 
             // btnSave
             // 
