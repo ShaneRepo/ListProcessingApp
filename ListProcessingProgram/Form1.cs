@@ -128,6 +128,39 @@ namespace ListProcessingProgram
             ToList();
             DisplayList(numList);
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            int count = 0;
+            ToList();
+            if (!string.IsNullOrWhiteSpace(txtSearch.Text))
+            {
+                int search = int.Parse(txtSearch.Text);
+                if (numList.Contains(search))
+                {
+                    foreach (int number in numList)
+                    {
+                        if (number == search)
+                        {
+                            count++;
+                        }
+                    }
+                    MessageBox.Show("Your number is in the list " + count + " times.");
+                }
+                else
+                {
+                    MessageBox.Show("Your number is not in the list.");
+                }
+                txtSearch.Text = "";
+                txtSearch.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Enter a integer into the textbox you want to search for.");
+                txtSearch.Focus();
+            }
+            
+        }
     }
     
 }

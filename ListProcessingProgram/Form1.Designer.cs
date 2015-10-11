@@ -41,6 +41,9 @@
             this.btnRemove = new System.Windows.Forms.Button();
             this.lblDisplay = new System.Windows.Forms.Label();
             this.btnDisplay = new System.Windows.Forms.Button();
+            this.lblSearchList = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnHelp
@@ -167,11 +170,41 @@
             this.btnDisplay.UseVisualStyleBackColor = true;
             this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
+            // lblSearchList
+            // 
+            this.lblSearchList.AutoSize = true;
+            this.lblSearchList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchList.Location = new System.Drawing.Point(16, 267);
+            this.lblSearchList.Name = "lblSearchList";
+            this.lblSearchList.Size = new System.Drawing.Size(101, 13);
+            this.lblSearchList.TabIndex = 13;
+            this.lblSearchList.Text = "Search The List:";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(19, 296);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(124, 23);
+            this.btnSearch.TabIndex = 14;
+            this.btnSearch.Text = "Search For Number";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(131, 267);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(100, 20);
+            this.txtSearch.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(865, 630);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.lblSearchList);
             this.Controls.Add(this.btnDisplay);
             this.Controls.Add(this.lblDisplay);
             this.Controls.Add(this.btnRemove);
@@ -208,6 +241,9 @@
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Label lblDisplay;
         private System.Windows.Forms.Button btnDisplay;
+        private System.Windows.Forms.Label lblSearchList;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }
 
