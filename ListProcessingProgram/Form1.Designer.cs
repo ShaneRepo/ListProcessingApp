@@ -274,6 +274,7 @@
             this.btnLoad.TabIndex = 22;
             this.btnLoad.Text = "Load List";
             this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnHigh
             // 

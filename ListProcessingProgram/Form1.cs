@@ -225,6 +225,23 @@ namespace ListProcessingProgram
             var min = numList.Min();
             MessageBox.Show("The lowest value of the list is: " + min);
         }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                StreamReader inputFile = File.OpenText("list.txt");
+                while (!inputFile.EndOfStream)
+                {
+                    lstboxList.Items.Add(int.Parse(inputFile.ReadLine()));
+                }
+                inputFile.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No file to load. Save a file first then try loading.");
+            }
+        }
     }
     
 }
