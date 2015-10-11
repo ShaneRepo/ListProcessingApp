@@ -170,6 +170,13 @@ namespace ListProcessingProgram
                 e.Handled = true;
             }
         }
+        // click event to sum the list
+        private void btnTotal_Click(object sender, EventArgs e)
+        {
+            ToList();
+            int sum = numList.Sum();
+            MessageBox.Show("The sum of the list is: " + sum);
+        }
     }
     
 }

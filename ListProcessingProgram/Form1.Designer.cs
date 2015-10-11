@@ -44,6 +44,8 @@
             this.lblSearchList = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.btnTotal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnHelp
@@ -104,7 +106,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(12, 71);
+            this.btnAdd.Location = new System.Drawing.Point(78, 76);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 1;
@@ -142,7 +144,7 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(16, 165);
+            this.btnRemove.Location = new System.Drawing.Point(64, 148);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(109, 23);
             this.btnRemove.TabIndex = 10;
@@ -182,7 +184,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(19, 296);
+            this.btnSearch.Location = new System.Drawing.Point(16, 293);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(124, 23);
             this.btnSearch.TabIndex = 14;
@@ -198,11 +200,33 @@
             this.txtSearch.TabIndex = 15;
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(19, 343);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(90, 13);
+            this.lblTotal.TabIndex = 16;
+            this.lblTotal.Text = "Total The List:";
+            // 
+            // btnTotal
+            // 
+            this.btnTotal.Location = new System.Drawing.Point(115, 338);
+            this.btnTotal.Name = "btnTotal";
+            this.btnTotal.Size = new System.Drawing.Size(95, 23);
+            this.btnTotal.TabIndex = 17;
+            this.btnTotal.Text = "Total The List";
+            this.btnTotal.UseVisualStyleBackColor = true;
+            this.btnTotal.Click += new System.EventHandler(this.btnTotal_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(865, 630);
+            this.Controls.Add(this.btnTotal);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblSearchList);
@@ -245,6 +269,8 @@
         private System.Windows.Forms.Label lblSearchList;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Button btnTotal;
     }
 }
 
