@@ -225,7 +225,7 @@ namespace ListProcessingProgram
             var min = numList.Min();
             MessageBox.Show("The lowest value of the list is: " + min);
         }
-
+        // load a file from bin\debug folder
         private void btnLoad_Click(object sender, EventArgs e)
         {
             try
@@ -236,10 +236,30 @@ namespace ListProcessingProgram
                     lstboxList.Items.Add(int.Parse(inputFile.ReadLine()));
                 }
                 inputFile.Close();
+                MessageBox.Show("Your file has been loaded into the listbox.");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("No file to load. Save a file first then try loading.");
+            }
+        }
+        // save a file to bin\debug folder
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            ToList();
+            try
+            {
+                StreamWriter outputFile = File.CreateText("list.txt");
+                foreach (int i in numList)
+                {
+                    outputFile.WriteLine(i);
+                }
+                outputFile.Close();
+                MessageBox.Show("Your file has been saved.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No data to save. Enter values into the list first.");
             }
         }
     }
