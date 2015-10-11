@@ -128,7 +128,7 @@ namespace ListProcessingProgram
             ToList();
             DisplayList(numList);
         }
-
+        // search for a number and occurences + validation/user-proof
         private void btnSearch_Click(object sender, EventArgs e)
         {
             int count = 0;
@@ -160,6 +160,15 @@ namespace ListProcessingProgram
                 txtSearch.Focus();
             }
             
+        }
+        // allow only numbers entered in textbox
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
     
