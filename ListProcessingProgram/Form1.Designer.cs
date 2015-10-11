@@ -245,6 +245,7 @@
             this.btnMedium.TabIndex = 19;
             this.btnMedium.Text = "Display Median";
             this.btnMedium.UseVisualStyleBackColor = true;
+            this.btnMedium.Click += new System.EventHandler(this.btnMedium_Click);
             // 
             // btnMode
             // 

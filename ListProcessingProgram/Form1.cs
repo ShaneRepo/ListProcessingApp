@@ -184,6 +184,24 @@ namespace ListProcessingProgram
             double mean = numList.Average();
             MessageBox.Show("The mean of the list is: " + mean);
         }
+        // get the medium
+        private void btnMedium_Click(object sender, EventArgs e)
+        {
+            ToList();
+            int numberCount = numList.Count(); 
+            int halfIndex = numList.Count()/2; 
+            var sortedNumbers = numList.OrderBy(n=>n); 
+            double median; 
+            if ((numberCount % 2) == 0) 
+            { 
+                median = ((sortedNumbers.ElementAt(halfIndex) + sortedNumbers.ElementAt((halfIndex - 1)))/ 2); 
+            } 
+            else 
+            { 
+                median = sortedNumbers.ElementAt(halfIndex); 
+            }
+            MessageBox.Show("The mean of the list is: " + median);
+        }
     }
     
 }
