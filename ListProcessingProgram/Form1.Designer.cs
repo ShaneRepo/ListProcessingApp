@@ -283,6 +283,7 @@
             this.btnHigh.TabIndex = 23;
             this.btnHigh.Text = "Highest Value";
             this.btnHigh.UseVisualStyleBackColor = true;
+            this.btnHigh.Click += new System.EventHandler(this.btnHigh_Click);
             // 
             // btnLow
             // 
@@ -292,6 +293,7 @@
             this.btnLow.TabIndex = 24;
             this.btnLow.Text = "Lowest Value";
             this.btnLow.UseVisualStyleBackColor = true;
+            this.btnLow.Click += new System.EventHandler(this.btnLow_Click);
             // 
             // Form1
             // 

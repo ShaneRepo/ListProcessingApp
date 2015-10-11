@@ -211,6 +211,20 @@ namespace ListProcessingProgram
             Select(g => g.Key).FirstOrDefault();
             MessageBox.Show("The mode of the list is: " + mode);
         }
+        // get the highest value
+        private void btnHigh_Click(object sender, EventArgs e)
+        {
+            ToList();
+            var max = numList.Max();
+            MessageBox.Show("The highest value of the list is: " + max);
+        }
+        // get the lowest value
+        private void btnLow_Click(object sender, EventArgs e)
+        {
+            ToList();
+            var min = numList.Min();
+            MessageBox.Show("The lowest value of the list is: " + min);
+        }
     }
     
 }
