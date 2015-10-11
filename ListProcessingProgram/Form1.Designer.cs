@@ -53,6 +53,8 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnHigh = new System.Windows.Forms.Button();
             this.btnLow = new System.Windows.Forms.Button();
+            this.btnSortAsc = new System.Windows.Forms.Button();
+            this.btnSortDesc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnHelp
@@ -297,11 +299,33 @@
             this.btnLow.UseVisualStyleBackColor = true;
             this.btnLow.Click += new System.EventHandler(this.btnLow_Click);
             // 
+            // btnSortAsc
+            // 
+            this.btnSortAsc.Location = new System.Drawing.Point(8, 506);
+            this.btnSortAsc.Name = "btnSortAsc";
+            this.btnSortAsc.Size = new System.Drawing.Size(95, 23);
+            this.btnSortAsc.TabIndex = 25;
+            this.btnSortAsc.Text = "Sort Ascending";
+            this.btnSortAsc.UseVisualStyleBackColor = true;
+            this.btnSortAsc.Click += new System.EventHandler(this.btnSortAsc_Click);
+            // 
+            // btnSortDesc
+            // 
+            this.btnSortDesc.Location = new System.Drawing.Point(110, 505);
+            this.btnSortDesc.Name = "btnSortDesc";
+            this.btnSortDesc.Size = new System.Drawing.Size(96, 23);
+            this.btnSortDesc.TabIndex = 26;
+            this.btnSortDesc.Text = "Sort Descending";
+            this.btnSortDesc.UseVisualStyleBackColor = true;
+            this.btnSortDesc.Click += new System.EventHandler(this.btnSortDesc_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(865, 630);
+            this.Controls.Add(this.btnSortDesc);
+            this.Controls.Add(this.btnSortAsc);
             this.Controls.Add(this.btnLow);
             this.Controls.Add(this.btnHigh);
             this.Controls.Add(this.btnLoad);
@@ -362,6 +386,8 @@
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnHigh;
         private System.Windows.Forms.Button btnLow;
+        private System.Windows.Forms.Button btnSortAsc;
+        private System.Windows.Forms.Button btnSortDesc;
     }
 }
 

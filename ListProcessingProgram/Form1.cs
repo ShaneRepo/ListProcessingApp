@@ -262,6 +262,32 @@ namespace ListProcessingProgram
                 MessageBox.Show("No data to save. Enter values into the list first.");
             }
         }
+        // sort ascending order
+        private void btnSortAsc_Click(object sender, EventArgs e)
+        {
+            ToList();
+            var ascendingOrder = numList.OrderBy(i => i).ToList();
+            numList = ascendingOrder;
+            lstboxList.Items.Clear();
+            //lstboxList.Items.Add(numList);
+            foreach (int item in numList)
+            {
+                lstboxList.Items.Add(item);
+            }
+        }
+        // sort descending order
+        private void btnSortDesc_Click(object sender, EventArgs e)
+        {
+            ToList();
+            var descendingOrder = numList.OrderByDescending(i => i).ToList();
+            numList = descendingOrder;
+            lstboxList.Items.Clear();
+            //lstboxList.Items.Add(numList);
+            foreach (int item in numList)
+            {
+                lstboxList.Items.Add(item);
+            }         
+        }
     }
     
 }
