@@ -51,6 +51,8 @@
             this.btnMode = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
+            this.btnHigh = new System.Windows.Forms.Button();
+            this.btnLow = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnHelp
@@ -271,11 +273,31 @@
             this.btnLoad.Text = "Load List";
             this.btnLoad.UseVisualStyleBackColor = true;
             // 
+            // btnHigh
+            // 
+            this.btnHigh.Location = new System.Drawing.Point(8, 466);
+            this.btnHigh.Name = "btnHigh";
+            this.btnHigh.Size = new System.Drawing.Size(95, 23);
+            this.btnHigh.TabIndex = 23;
+            this.btnHigh.Text = "Highest Value";
+            this.btnHigh.UseVisualStyleBackColor = true;
+            // 
+            // btnLow
+            // 
+            this.btnLow.Location = new System.Drawing.Point(109, 466);
+            this.btnLow.Name = "btnLow";
+            this.btnLow.Size = new System.Drawing.Size(95, 23);
+            this.btnLow.TabIndex = 24;
+            this.btnLow.Text = "Lowest Value";
+            this.btnLow.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(865, 630);
+            this.Controls.Add(this.btnLow);
+            this.Controls.Add(this.btnHigh);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnMode);
@@ -332,6 +354,8 @@
         private System.Windows.Forms.Button btnMode;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.Button btnHigh;
+        private System.Windows.Forms.Button btnLow;
     }
 }
 
