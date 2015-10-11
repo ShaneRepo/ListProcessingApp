@@ -18,11 +18,10 @@ namespace ListProcessingProgram
         StreamReader inputFile;
         // global list object to hold integers
         List<int> numList = new List<int>();
-  
         // method to define instructions
         public void Help()
         {
-            MessageBox.Show("The app allows you to add numbers to a list, sort them,\n remove them and save/read to/from file.");
+            MessageBox.Show("The app allows you to manipulate a list of integers, search & sort the list, and save and load the list to a file.");
         }
         // method to display the list
         public void DisplayList(List<int> numList)
@@ -33,20 +32,16 @@ namespace ListProcessingProgram
             {
                 output += item + "\n";
             }
-            MessageBox.Show(output);
-            //Array.Clear(array, 0, array.Length);
-            //output = string.Empty;
+            MessageBox.Show(output);          
         }
         // method to convert listbox items to list
         public void ToList()
         {
-            numList.Clear();
-            //List<string> lb = new List<string>();
+            numList.Clear();          
              foreach (int nums in lstboxList.Items)
              {
                  numList.Add(nums);
-             }
-            // numList = lb.ConvertAll<int>(Convert.ToInt32);
+             }         
         }
         public Form1()
         {

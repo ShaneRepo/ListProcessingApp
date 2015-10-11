@@ -55,11 +55,13 @@
             this.btnLow = new System.Windows.Forms.Button();
             this.btnSortAsc = new System.Windows.Forms.Button();
             this.btnSortDesc = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnHelp
             // 
-            this.btnHelp.Location = new System.Drawing.Point(434, 562);
+            this.btnHelp.Location = new System.Drawing.Point(381, 343);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(75, 23);
             this.btnHelp.TabIndex = 2;
@@ -69,7 +71,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(550, 562);
+            this.btnExit.Location = new System.Drawing.Point(462, 343);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 3;
@@ -89,6 +91,7 @@
             // 
             this.lblAddToList.AutoSize = true;
             this.lblAddToList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddToList.ForeColor = System.Drawing.Color.Black;
             this.lblAddToList.Location = new System.Drawing.Point(13, 44);
             this.lblAddToList.Name = "lblAddToList";
             this.lblAddToList.Size = new System.Drawing.Size(76, 13);
@@ -99,7 +102,8 @@
             // 
             this.lblList.AutoSize = true;
             this.lblList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblList.Location = new System.Drawing.Point(326, 47);
+            this.lblList.ForeColor = System.Drawing.Color.Red;
+            this.lblList.Location = new System.Drawing.Point(297, 77);
             this.lblList.Name = "lblList";
             this.lblList.Size = new System.Drawing.Size(57, 13);
             this.lblList.TabIndex = 5;
@@ -108,7 +112,7 @@
             // lstboxList
             // 
             this.lstboxList.FormattingEnabled = true;
-            this.lstboxList.Location = new System.Drawing.Point(398, 44);
+            this.lstboxList.Location = new System.Drawing.Point(360, 76);
             this.lstboxList.Name = "lstboxList";
             this.lstboxList.Size = new System.Drawing.Size(120, 95);
             this.lstboxList.TabIndex = 6;
@@ -125,7 +129,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(319, 562);
+            this.button1.Location = new System.Drawing.Point(300, 343);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
@@ -165,6 +169,7 @@
             // 
             this.lblDisplay.AutoSize = true;
             this.lblDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisplay.ForeColor = System.Drawing.Color.Black;
             this.lblDisplay.Location = new System.Drawing.Point(16, 220);
             this.lblDisplay.Name = "lblDisplay";
             this.lblDisplay.Size = new System.Drawing.Size(76, 13);
@@ -213,6 +218,7 @@
             // 
             this.lblListFun.AutoSize = true;
             this.lblListFun.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListFun.ForeColor = System.Drawing.Color.Black;
             this.lblListFun.Location = new System.Drawing.Point(13, 343);
             this.lblListFun.Name = "lblListFun";
             this.lblListFun.Size = new System.Drawing.Size(192, 13);
@@ -261,7 +267,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(318, 529);
+            this.btnSave.Location = new System.Drawing.Point(300, 243);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 21;
@@ -271,7 +277,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(433, 529);
+            this.btnLoad.Location = new System.Drawing.Point(381, 243);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(75, 23);
             this.btnLoad.TabIndex = 22;
@@ -319,11 +325,35 @@
             this.btnSortDesc.UseVisualStyleBackColor = true;
             this.btnSortDesc.Click += new System.EventHandler(this.btnSortDesc_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(297, 210);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 13);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Controls For File IO:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(300, 302);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(232, 13);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Controls For Clearing Listbox, Exit, Help";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 630);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(576, 559);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSortDesc);
             this.Controls.Add(this.btnSortAsc);
             this.Controls.Add(this.btnLow);
@@ -388,6 +418,8 @@
         private System.Windows.Forms.Button btnLow;
         private System.Windows.Forms.Button btnSortAsc;
         private System.Windows.Forms.Button btnSortDesc;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
