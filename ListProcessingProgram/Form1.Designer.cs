@@ -233,6 +233,7 @@
             this.btnMean.TabIndex = 18;
             this.btnMean.Text = "Display Mean";
             this.btnMean.UseVisualStyleBackColor = true;
+            this.btnMean.Click += new System.EventHandler(this.btnMean_Click);
             // 
             // btnMedium
             // 

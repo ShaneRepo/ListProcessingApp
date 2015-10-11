@@ -177,6 +177,13 @@ namespace ListProcessingProgram
             int sum = numList.Sum();
             MessageBox.Show("The sum of the list is: " + sum);
         }
+        // click event for displaying the mean
+        private void btnMean_Click(object sender, EventArgs e)
+        {
+            ToList();
+            double mean = numList.Average();
+            MessageBox.Show("The mean of the list is: " + mean);
+        }
     }
     
 }
