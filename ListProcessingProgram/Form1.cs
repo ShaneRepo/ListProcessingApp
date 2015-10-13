@@ -140,7 +140,7 @@ namespace ListProcessingProgram
                             count++;
                         }
                     }
-                    MessageBox.Show("Your number is in the list " + count + " times.");
+                    MessageBox.Show("Your number is in the list " + count + " time(s).");
                 }
                 else
                 {
@@ -195,15 +195,17 @@ namespace ListProcessingProgram
             { 
                 median = sortedNumbers.ElementAt(halfIndex); 
             }
-            MessageBox.Show("The mean of the list is: " + median);
+            MessageBox.Show("The median of the list is: " + median);
         }
         // get the mode
         private void btnMode_Click(object sender, EventArgs e)
         {
             ToList();
-            var mode = numList.GroupBy(n => n).
-            OrderByDescending(g => g.Count()).
-            Select(g => g.Key).FirstOrDefault();
+            int? mode = numList
+            .GroupBy(x => x)
+            .OrderByDescending(x => x.Count()).ThenBy(x => x.Key)
+            .Select(x => (int?)x.Key)
+            .FirstOrDefault();
             MessageBox.Show("The mode of the list is: " + mode);
         }
         // get the highest value
